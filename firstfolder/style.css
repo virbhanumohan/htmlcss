@@ -1,0 +1,185 @@
+/* Global Reset and Basic Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Default font styles */
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Ensure containers adapt based on screen size */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Content Section */
+.content {
+  width: 100%;
+  max-width: 900px; /* Limit width for large screens */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head {
+  font-size: 56px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 66px;
+  width: 100%;
+}
+
+.description {
+  font-size: 24px;
+  color: #333333;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 32px;
+}
+
+/* Button Styling */
+.btn {
+  background-color: #333333;
+  color: white;
+  font-size: 22px;
+  padding: 20px 24px;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 250px; /* Prevent button from being too large */
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Card Section */
+.card {
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* Frame1 (Top Content with Boxes) */
+.frame1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+  gap: 20px;
+}
+
+.box1, .box2 {
+  background-color: #C6D9E1;
+  padding: 20px;
+  border-radius: 24px;
+  flex: 1 1 45%; /* Boxes take up 45% width on larger screens */
+  min-width: 250px; /* Prevent shrinking too small */
+}
+
+.title1, .title2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.para {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Frame2 (Content with Image) */
+.frame2 {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box3 {
+  background-color: #F4F4F4;
+  padding: 20px;
+  border-radius: 24px;
+  flex: 1 1 100%; /* Full width on smaller screens */
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Lock Section */
+.lock {
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 725px;
+}
+
+.lock img {
+  width: 100%;
+  max-width: 725px;
+  height: auto;
+}
+
+/* Media Query for Small Screens (max-width: 600px) */
+@media (max-width: 600px) {
+  .head {
+      font-size: 36px; /* Smaller font size for small screens */
+  }
+
+  .description {
+      font-size: 18px; /* Smaller description font */
+  }
+
+  .btn {
+      font-size: 20px; /* Smaller button text */
+      padding: 15px 20px;
+  }
+
+  .frame1, .frame2 {
+      flex-direction: column; /* Stack elements vertically */
+  }
+
+  .box1, .box2, .box3 {
+      width: 100%; /* Full width for boxes */
+      margin-bottom: 20px; /* Add space between stacked elements */
+  }
+
+  .image {
+      width: 80px; /* Adjust image size on small screens */
+      height: 80px;
+  }
+
+  .lock img {
+      max-width: 100%;
+      height: auto;
+  }
+}
+
+/* Optional: Media Query for Tablets (max-width: 900px) */
+@media (max-width: 900px) {
+  .head {
+      font-size: 48px;
+  }
+
+  .description {
+      font-size: 20px;
+  }
+
+  .frame1 {
+    
+      flex-direction: column; /* Stack boxes on medium screens */
+  }
+}
